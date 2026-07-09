@@ -184,6 +184,7 @@ def summarize_interaction(interaction_id: str) -> str:
             Interaction.id == int(interaction_id)
         ).first()
         if not interaction:
+
             return json.dumps({
                 "status": "error",
                 "message": f"Interaction #{interaction_id} not found"
